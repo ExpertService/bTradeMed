@@ -1,0 +1,779 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+//@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+html,
+body
+	overflow-x: hidden
+
+html,
+body,
+h1,h2,h3,h4,h5,h6,
+section
+	padding: 0
+	margin: 0
+	font-style: normal
+	font-weight: normal
+
+
+body
+	font-family: $ff_regular
+	font-size: 16px
+	min-width: 320px
+	width: 100%
+	background-size: cover
+	position: relative
+	line-height: 1.4
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	//Disable antialiased fonts
+	-webkit-font-smoothing: antialiased
+ 	-moz-osx-font-smoothing: grayscale
+
+h1
+	font-family: $ff_bold
+	font-size: $f21
+	span
+		font-family: $ff_thin
+		font-size: $f18
+
+h3
+	text-align: center
+	font-family: $ff_medium
+	font-size: $f37
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		margin-top: 0.75rem
+		width: 10rem
+		left: 50%
+		transform: translateX(-50%)		
+		border-bottom: 3px solid
+
+.container
+	position: relative
+	width: auto
+	max-width: 1170px
+	padding: 0 15px
+	margin: 0 auto
+
+.button,
+.button-box
+	display: block
+	padding: 15px 40px
+	margin: 0 auto
+	border: 1px solid
+	border-radius: 3px
+	text-align: center
+	text-transform: uppercase
+	text-decoration: none
+	font-family: $ff_medium
+	font-style: $f16
+
+.button
+	border-color: $color-accent
+	background-color: $color-accent
+	margin: 15px 18% 30px
+	color: #000
+	&:hover
+		box-shadow: 10px 10px 16px rgba(22, 120, 64, .4)
+	&:active
+		background-color: $color_accent_dark
+		border: 1px solid
+
+
+.button-box
+	color: #fff
+	background-color: transparent
+	padding: 1rem 1.5rem
+	margin: 0 auto
+	width: 11.25rem
+	&:hover,
+	&:active
+		background-color: $color_accent
+
+header,
+.hero,
+.products,
+.steps
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		padding: 0
+		margin: 0
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-position: top center
+		background-repeat: no-repeat
+		background-size: auto 100%
+		opacity: 0.3
+		z-index: -1	
+// HEADER
+header
+	position: relative
+	padding-bottom: 11rem
+	min-height: 85vh
+	&:before
+		background-image: url('../img/bg_header.jpg')
+		opacity: 0.8
+		background-position: center top
+		background-size: cover
+	h1
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 1rem
+			background-color: $color_main
+
+.header-line
+	position: relative
+	display: block
+	width: 34rem
+	color: #fff
+	text-align: center
+	padding: 0
+	margin: 0 auto
+	font-family: $ff_thin
+	font-size: $f18
+	background-color: $color_main
+	b
+		display: block
+		margin: 0 auto
+		font-family: $ff_bold
+		font-size: $f21
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		top: 0
+		border: 3em solid transparent
+		border-top-color: $color_main
+		z-index: -1
+	&:before
+		left: -3em
+	&:after
+		right: -3em
+
+.icon-logo_trade_med,
+.icon-logo_harol
+	display: block
+	position: absolute
+	top: -2.5rem
+	max-height: 6rem
+
+.icon-logo_trade_med
+	max-width: 14rem
+	left: 0
+	fill: #6ab1bf
+
+.icon-logo_harol
+	max-width: 10rem
+	right: 0
+	fill: #00763b
+
+.header-flex_bar
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 0
+	margin: 0
+
+.header-flex_bar
+	flex: 6 0 auto
+	flex-direction: column
+	padding: 1rem 0
+	margin: 0
+
+.header_bar__item
+	display: flex
+	flex-direction: row
+	justify-content: center
+	padding: 0
+	margin: 0
+
+.header_bar__item
+	& li
+		list-style-type: none
+
+.header_bar__item,
+.header-contacts__phone
+	& a:nth-child(1)
+		text-align: right
+
+nav.header_bar__item
+	& a
+		padding: 0 1.25rem
+
+.header-contacts__phone,
+.header-contacts__email
+	font-family: $ff_bold
+	font-size: $f22
+	a
+		color: #000
+		text-decoration: none
+		padding: 0 1.25rem 0 0.5rem
+
+.icon-contacts
+		display: inline-block
+		width: $f22
+		height: $f22
+		vertical-align: top
+		fill: $color_accent
+		padding: 0.25rem 0
+		margin-left: 1rem
+
+nav a
+	color: #217da4
+	font-family: $ff_bold
+	font-size: $f16
+	text-transform: uppercase
+	text-decoration: none
+	&:hover,
+	&:active
+		color: #52b0d7
+		text-decoration: underline
+
+// Hero section
+.hero
+	position: relative
+	width: 100%
+	min-height: 30rem
+	clip-path: url('#hero-bg_clip_path')
+	&:before
+		background-image: url('../img/bg_hero.jpg')
+		background-size: cover
+		background-position: center
+		opacity: 1
+		z-index: -1
+	img
+		position: absolute
+		max-width: 21.213rem
+		max-height: 21.213rem
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+
+.hero-wrapper
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 21.213rem
+		height: 21.213rem
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) rotate(45deg)
+		padding: 0
+		margin: 0
+		background-color: #fff
+		opacity: 0.86
+		z-index: -1
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 16rem
+		height: 16rem
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) rotate(45deg)
+		padding: 0
+		margin: 0
+		clip-path: url('#hero_clip_path');
+		border: 2px solid $color_accent
+
+.header-benefit
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: flex-stretch
+	padding: 0
+	margin: 0 auto
+
+.header-benefit__item
+	display: block
+	position: relative
+	flex-basis: 25%
+	background-color: #fff
+	padding: 0
+	margin: 0 1.5rem
+	text-align: center
+	border-radius: 3px
+	box-shadow: 6px 6px 8px rgba(62, 62, 62, .4)
+	&:nth-child(2)
+		margin-top: 2rem
+		margin-bottom: -2rem
+	p
+		font-family: $ff_regular
+		font-size: $f14
+		padding: 0 1rem 2rem
+		margin: 0
+
+.benefit-icon
+	fill: $color_accent
+	margin-top: 1rem
+	width: 3.75rem
+	height: 3.75rem		
+
+.products-flex,
+.advantages-flex,
+.reviews-flex,
+.certificates-flex
+	display: flex
+	flex-wrap: wrap
+	margin-top: 60px
+
+.products-flex,
+.advantages-flex,
+.reviews-flex
+	justify-content: space-between
+
+.certificates-flex
+	justify-content: space-around
+
+.product,
+.advantage,
+.opinion
+	background: #fff
+	box-sizing: border-box
+
+// Products section
+.products
+	position: relative
+	background: $color_main
+	padding-bottom: 6.25rem
+	clip-path: polygon(0 0, 50% 11rem, 100% 0, 100% 100%, 0% 100%);
+	padding-top: 11rem
+	margin-top: -11rem
+	h3
+		color: #fff
+		padding-top: 7rem
+	span
+		display: block
+		color: #fff
+		font-family: $ff_bold
+		font-size: 1.75rem
+		text-align: center
+		padding-bottom: 2rem
+		margin: 0 auto
+	&:before
+		background-image: url('../img/bg_products.jpg')
+
+.product
+	width: 32%
+	min-width: 218px
+	position: relative
+	max-height: 100%
+	margin: 0 0 30px
+	padding-bottom: 90px
+	border-radius: 3px
+	box-shadow: 6px 6px 8px rgba(62, 62, 62, .4)
+	figure
+		position: relative
+		min-height: 232px
+		margin: 0
+		border-bottom: 1px solid #d4d4d4
+		box-shadow: 0 3px 3px rgba(212, 212, 212, .6)
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 80%
+			max-height: 100%
+	h2
+		padding: 25px 10px 10px 32px
+		font-family: $ff_medium
+		font-size: $f17
+		text-transform: uppercase
+	p
+		padding: 0 10px 0 32px
+		font-family: $ff_regular
+		font-size: $f15
+		text-transform: uppercase
+	.button
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+
+.product-property__list
+	padding: 0 10px 0 32px
+	list-style-type: none
+	p
+		display: inline-block
+		width: 90%
+		padding: 0
+		margin: 0
+		text-transform: none
+		font-family: $ff_light
+		font-size: $f15
+
+.icon-property__list
+		display: inline-block
+		width: 0.75rem
+		height: 0.75rem
+		vertical-align: top
+		fill: $color_accent
+		padding: 0.25rem
+		padding-left: 0
+
+.product-info
+	display: flex
+	flex-direction: column
+	justify-content: center
+	color: #fff
+	background-color: $color_accent
+	text-align: center
+	p
+		padding: 1.75rem 1.75rem 0
+		margin: 0
+		text-transform: none
+		font-family: $ff_regular
+		font-size: $f16
+	span
+		padding: 1.75rem 1.75rem 0
+		font-family: $ff_bold
+		font-size: $f25
+	.attention
+		font-size: $f30
+
+// Certificates section
+.certificates
+	background: #fff
+	clip-path: polygon(0 0, 50% 11rem, 100% 0, 100% 100%, 0% 100%);
+	padding-bottom: 5rem
+	padding-top: 11rem
+	margin-top: -11rem
+	h3
+		color: $color_main
+		padding-top: 5rem
+
+
+.certificate
+	display: block
+	position: relative
+	width: 20%
+	max-width: 20%
+	height: auto
+	margin: 0
+	box-shadow: 6px 6px 8px rgba(62, 62, 62, .4)
+	img
+		display: block
+		width: 100%
+		height: auto
+
+// Advantages section
+.advantages
+	background: #85d6ff url('../img/bg_advantages.png')
+	clip-path: polygon(0 11rem, 50% 0, 100% 11rem, 100% 100%, 0% 100%);
+	padding-bottom: 17.5rem
+	h3
+		padding-top: 7rem
+	p
+		padding: 0 1.75rem
+
+.advantage
+	width: 23%
+	margin-bottom: 30px
+	text-align: center
+	font-family: $ff_regular
+	font-style: 1rem
+	border-radius: 3px
+	box-shadow: 6px 6px 8px rgba(62, 62, 62, .4)
+	p
+		margin: 0
+		padding-bottom: 2rem
+
+.advantage-icon
+	fill: $color_accent
+	margin-top: 1rem
+	width: 3.75rem
+	height: 3.75rem
+
+// Reviews section
+.reviews
+	background: #d3d3d3 url('../img/bg_reviews.png')
+	clip-path: polygon(0 11rem, 50% 0, 100% 11rem, 100% 100%, 0% 100%);
+	padding-bottom: 17.5rem
+	margin-top: -11rem
+	h3
+		padding-top: 7rem	
+
+.opinion
+	width: 48%
+	padding: 20px 20px 40px 35px
+	margin-bottom: 30px
+	box-shadow: 6px 6px 8px rgba(62, 62, 62, .4)
+	.name
+		font-family: $ff_bold
+		font-size: $f18
+	p
+		font-family: $ff_regular
+	.sign
+		display: block
+		color: #49b778
+		text-align: right
+		font-family: $ff_bold
+		font-size: $f15
+
+// Steps section
+.steps
+	background: #f7f8fb
+	position: relative
+	margin: 0
+	margin-top: -11rem
+	padding: 0
+	padding-bottom: 6rem
+	clip-path: polygon(0 11rem, 50% 0, 100% 11rem, 100% 100%, 0% 100%);
+	h3
+		padding-top: 7rem	
+	&:before
+		clip-path: polygon(0 11rem, 50% 0, 100% 11rem, 100% 100%, 0% 100%);
+		background-image: url('../img/bg_steps.jpg')
+		background-size: cover
+		background-position: center
+		filter: blur(3px)
+		filter: url('#blur3')
+	.container
+		padding-left: 1.75rem
+	.button
+		display: inline-block
+		margin: 0
+		margin-top: -1.75rem
+
+.steps-nav
+	text-align: center
+	margin-top: 3.75rem
+	margin-bottom: 5rem
+
+.step-nav__item
+	display: inline-block
+	padding: 1rem 2rem
+	color: #989898
+	font-family: $ff_black
+	font-size: $f20
+	background: transparent
+	border: none
+
+.steps-nav
+	input[name='type-company']
+		display: none
+		&:checked + .step-nav__item
+			color: $color_accent
+			border: 1px solid $color_accent
+			border-radius: 3px
+		&:hover:not(:checked) + .step-nav__item
+			background-color: rgba(128, 128, 128, 0.1)
+			
+.trade-company,
+.government-company
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+
+.step
+	display: block
+	position: relative
+	width: 8.5rem
+	max-width: 8.5rem
+	min-height: 16rem
+	padding: 0.5rem
+	margin-bottom: 3rem
+	font-family: $ff_regular
+	font-size: $f15
+	text-align: center
+	background-color: #fff
+	border: 1px solid #d2d2d2
+	border-radius: 3px
+	box-shadow: 3px 3px 18px 3px rgba(62, 62, 62, 0.3)
+	&:nth-last-child(1)
+		margin-right: 0
+		margin-bottom: -2.5rem
+	.step-icon-wrapper
+		position: relative
+		width: 100%
+		max-width: 100%
+		height: 6rem
+		max-height: 6rem
+		.icon
+			position: absolute
+			max-width: 3.5rem
+			max-height: 3.5rem
+			fill: $color_accent
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	span
+		display: block
+		text-transform: uppercase
+
+.step-number
+	display: block
+	position: absolute
+	width: 3.5rem
+	height: 3.5rem
+	top: 0
+	left: 0
+	color: #747474
+	background-color: #fff
+	border-radius: 50%
+	transform: translate(-50%, -50%)
+	box-shadow: 0 0 3px 1px rgba(80, 80, 80, 0.3)
+	span
+		position: absolute
+		color: inherit
+		font-family: $ff_bold
+		font-size: $f28
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+.accent-step
+	border: 2px solid $color_accent
+	& > .step-number
+		color: #fff
+		background-color: $color_accent
+
+.steps-summary
+	color: #575757
+	font-family: $ff_regular
+	font-size: $f20
+	text-align: center
+
+.steps-summary-span-accent,
+.steps-summary-span
+		display: inline-block
+
+.steps-summary-span-accent
+	background-color: #49b778
+	color: #fff
+	padding: 0.5rem 0.75rem
+	font-size: $f17
+	text-transform: uppercase
+	border-radius: 3px
+
+// Contacts section
+.contacts
+	height: $map-size
+	max-height: $map-size
+
+.contacts-box
+	position: absolute
+	height: $map-size
+	width: 18.75rem
+	padding: 4.75rem 1.75rem 0
+	box-sizing: border-box
+	top: -$map-size
+	color: #fff
+	text-align: center
+	font-family: $ff_bold
+	font-size: $f18
+	background-color: #000
+	opacity: 0.6
+	h3
+		color: #5cd891
+		padding-bottom: 1.75rem
+		font-family: $ff_bold
+		font-size: $f20
+		
+	a
+		color: #fff
+		text-decoration: none
+
+#contacts_map
+	display: block
+	position: relative
+	width: 100%
+	height: $map-size
+
+// Footer section
+footer
+	min-height: 5.75rem
+	background-color: #1f7394
+
+.footer-logo
+	height: 75%
+	fill: #d1d1d1
+	top: 0
+	bottom: 0
+	margin: auto 0
+
+.footer-flex,
+.contacts-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	font-family: $ff_medium
+	text-align: center
+
+.footer-flex
+	min-height: 5.75rem
+	margin: 0 12rem 0 16rem
+	padding-top: 2rem
+
+.contacts-flex
+	flex-grow: 2
+	justify-content: center
+
+.copyright
+	flex-grow: 1
+	color: #e7e7e7
+	font-size: $f14
+	padding-right: 1rem
+	span
+		font-size: $f13
+		text-transform: uppercase
+
+.contact
+	color: #f3f3f3
+	font-size: $f15
+	margin: 0 auto
+	a
+		color: inherit
+		text-decoration: none
+
+.hidden
+	display: none !important
+
+.dummy
+	visibility: hidden
+
+//ALWAYS END
+@import "media"

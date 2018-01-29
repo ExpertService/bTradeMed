@@ -1,0 +1,412 @@
+include ./mixins
+
+doctype html
+html(lang="ru-Ru")
+	head
+		title TradeMed - Официальный дилер дыхательных контуров Harol
+		meta(name="keywords", content="ключевые, слова документа")
+		meta(name="description", content="Краткое описание документа")
+		link(rel="stylesheet", href="./css/style.css")
+		link(rel="stylesheet", href="./css/fonts.css")
+		link(rel="stylesheet", href="./css/libs.min.css")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body
+		header
+			h1
+				span.header-line
+					b Trade Med
+					| Официальный дилер дыхательных контуров
+			.container
+				+icon('logo_trade_med')
+				+icon('logo_harol')
+				.header-flex_bar
+					ul.header_bar__item
+						li.header-contacts__phone
+							+icon('telephone','icon-contacts')
+							a(href='tel:+74955553322') +7 (495) 555 33 22
+						li.header-contacts__email
+							+icon('envelope','icon-contacts')
+							a(href='mailto:info@med-kontur.ru') info@med-kontur.ru
+					nav.header_bar__item
+						a(href='#') О производителе
+						a(href='#') О нашей компании
+			.hero
+				include ../svg/mask/mask.svg
+				.hero-wrapper
+					img(src='./img/svg/hero.svg#hero', alt='Дыхательные контуры Harol ваш надежный выбор')
+			.container
+				ul.header-benefit
+					li.header-benefit__item
+						+icon('warranty', 'benefit-icon')
+						p Мы гарантируем качество и совместимость с имеющимся у заказчика оборудованием
+					li.header-benefit__item
+						+icon('delivery', 'benefit-icon')
+						p Работаем со всеми транспортными и курьерскими компаниями
+					li.header-benefit__item
+						+icon('medical_kit', 'benefit-icon')
+						p Подбираем дыхательный контур для любых нужд и потребностей
+		section.products
+			.container
+				h3 Наша продукция
+				.products-flex
+					.product
+						figure
+							img(src='./img/products/product_01.png')
+						h2 Стандартный дыхательный контур
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Одноразовый или многоразовый
+								li
+									+icon('checked', 'icon-property__list')
+									p На выбор: взрослые, детские или неонатальные
+								li
+									+icon('checked', 'icon-property__list')
+									p Длина контура (на выбор):
+										br
+										| 120 / 160 / 180 / 200 см
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_02.png')
+						h2 Дыхательный контур с одним влагосборником
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Одноразовый или многоразовый
+								li
+									+icon('checked', 'icon-property__list')
+									p На выбор: взрослые, детские или неонатальные
+								li
+									+icon('checked', 'icon-property__list')
+									p Длина контура (на выбор):
+										br
+										| 120 / 160 / 180 / 200 см
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_03.png')
+						h2 Дыхательный контур с двумя влагосборниками
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Одноразовый или многоразовый
+								li
+									+icon('checked', 'icon-property__list')
+									p На выбор: взрослые, детские или неонатальные
+								li
+									+icon('checked', 'icon-property__list')
+									p Длина контура (на выбор):
+										br
+										| 120 / 160 / 180 / 200 см
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_04.png')
+						h2 Дыхательный контур с одним влагосборником, с линией обогрева, для использования с увлажнителями
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Одноразовый или многоразовый
+								li
+									+icon('checked', 'icon-property__list')
+									p На выбор: взрослые, детские или неонатальные
+								li
+									+icon('checked', 'icon-property__list')
+									p Длина контура (на выбор):
+										br
+										| 120 / 160 / 180 / 200 см
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_05.png')
+						h2 Дыхательный контур с двумя линиями обогрева, для использования с увлажнителями
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Одноразовый или многоразовый
+								li
+									+icon('checked', 'icon-property__list')
+									p На выбор: взрослые, детские или неонатальные
+								li
+									+icon('checked', 'icon-property__list')
+									p Длина контура (на выбор):
+										br
+										| 120 / 160 / 180 / 200 см
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_06.png')
+						h2 Дыхательный контур совместим с аппаратами ИВЛ "Savina"
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Высококачественный материал: силикон
+								li
+									+icon('checked', 'icon-property__list')
+									p Для взрослых пациентов
+								li
+									+icon('checked', 'icon-property__list')
+									p Набор необходимых переходников и адаптеров
+								li
+									+icon('checked', 'icon-property__list')
+									p Гарантируем совместимость с имеющимся у заказчика оборудованием
+								li
+									+icon('checked', 'icon-property__list')
+									p Конкурентная цена
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_07.png')
+						h2 Дыхательный контур совместим с аппаратами ИВЛ "Puritan Bennett"
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Высококачественный материал: силикон
+								li
+									+icon('checked', 'icon-property__list')
+									p Для детей
+								li
+									+icon('checked', 'icon-property__list')
+									p Набор необходимых переходников и адаптеров
+								li
+									+icon('checked', 'icon-property__list')
+									p Для использования с увлажнителями
+								li
+									+icon('checked', 'icon-property__list')
+									p Гарантируем совместимость с имеющимся у заказчика оборудованием
+								li
+									+icon('checked', 'icon-property__list')
+									p Конкурентная цена
+						a(href='#').button Заказать
+					.product
+						figure
+							img(src='img/products/product_08.png')
+						h2 Дыхательный контур совместим с аппаратами ИВЛ "Vela"
+						p Производитель: Harol, Италия
+						.product-property
+							ul.product-property__list
+								li
+									+icon('checked', 'icon-property__list')
+									p Высококачественный материал: силикон
+								li
+									+icon('checked', 'icon-property__list')
+									p Для взрослых пациентов
+								li
+									+icon('checked', 'icon-property__list')
+									p Набор необходимых переходников и адаптеров
+								li
+									+icon('checked', 'icon-property__list')
+									p Гарантируем совместимость с имеющимся у заказчика оборудованием
+								li
+									+icon('checked', 'icon-property__list')
+									p Конкурентная цена
+						a(href='#').button Заказать
+					.product.product-info
+						span.attention Внимание!
+						p Каждое изображение соответствует типу дыхательного контура.
+						p Полный состав набора дыхательного контура, цену и срок поставки уточняйте у специалистов нашей компании.
+						span Дополнительно:
+						p Подбираем нестандартные конфигурации дахательных контуров для любых нужд и потребностей заказчика!
+				span Для какого аппарата вам необходим
+					br
+					| дыхательный контур?
+				a(href='#').button-box Отправить заявку
+		section.certificates
+			.container
+				h3 Регистрационные удостоверения
+				.certificates-flex
+					figure.certificate
+						img(src='img/certificates/certificate_01.jpg')
+					figure.certificate
+						img(src='img/certificates/certificate_02.jpg')
+					figure.certificate
+						img(src='img/certificates/certificate_03.jpg')
+		section.advantages
+			.container
+				h3 Почему удобно работать с нами
+				.advantages-flex
+					.advantage
+						+icon('lung', 'advantage-icon')
+						p Мы подбираем дыхателные контуры для всех известных аппаратов ИВЛ и наркозных аппаратов
+					.advantage
+						+icon('percent', 'advantage-icon')
+						p Торгующим компаниям и постоянным клиентам предоставляем дилерские скидки
+					.advantage
+						+icon('specificity', 'advantage-icon')
+						p Предоставляем нашим клиентам техническое задание на выбранный дыхательный контур
+					.advantage
+						+icon('accreditation', 'advantage-icon')
+						p Мы аккредитованы на всех электронных торговых площадках
+					.advantage
+						+icon('certificate', 'advantage-icon')
+						p Вся продукция сертифицирована и имеется регистрационное удостоверение
+					.advantage
+						+icon('diamond', 'advantage-icon')
+						p Итальянское качество дыхательных контуров по доступной цене
+					.advantage
+						+icon('cross', 'advantage-icon')
+						p Одноразовые и многоразовые дыхательные контуры для любых нужд и потребностей
+					.advantage
+						+icon('delivery', 'advantage-icon')
+						p Дыхательные контуры в наличии на складе. При отсутствии на складе - быстрый срок поставки
+		section.reviews
+			.container
+				h3 Отзывы
+				.reviews-flex
+					.opinion
+						span.name Макарова Марина Васильевна
+						p Благодарю компанию "Трейд Мед" за оперативную поставку дыхательных контуров. Наш заказчик остался доволен качеством контуров.
+						span.sign Генеральный директор ООО "МедГрупп"
+					.opinion
+						span.name Сидорова Наталья
+						p Продукция хорошего качества. Практически всегда есть на складе. Заказчики рады, когда им поступает такая продукция. Нареканий не было.
+						span.sign Менеджер отдела закупок "МК "ХЭЛФ"
+					.opinion
+						span.name Матвеева Наталья
+						p Предоставили контуры на апробацию в Областную клиническую больницу. Заведующий сказал, что качество силиконовых трубок отличное. Спасибо за скидку и за быстрый срок поставки.
+						span.sign Менеджер по закупкам ООО "Пилар"
+					.opinion
+						span.name Романов Андрей
+						p Продукция данного производителя отличается высоким качеством, достойным внешним видом, высокими эксплуатацонными характеристиками. Контуры сохраняют эластичность после многократного использования.
+						span.sign Технический директор ООО "Палс Медикал"
+					.opinion
+						span.name Каряпина Оксана
+						p Заказывали дыхательные контуры нескольких видов под разные нужды одной из районных больниц. Очень выгодное соотношение цена/качество. Заказчик остался доволен. Спасибо!
+						span.sign Менеджер ООО "НПФ Медтехника"
+					.opinion
+						span.name Никонов Кирилл
+						p Выражаем благодарность компании "Трейд-Мед" за быструю доставку дыхательных контуров. Хотелось бы отметить высокое качество продукции и доступные цены.
+						span.sign Менеджер отдела закупок "МАРКЕТ МП"
+		section.steps
+			h3 Этапы работы
+			.container
+				nav.steps-nav
+					label
+						input(type='radio', name='type-company', value='trade-company', onclick='changedTypeCompany(this);', checked)
+						.step-nav__item Для торгующих компаний
+					label
+						input(type='radio', name='type-company', value='government-company', onclick='changedTypeCompany(this);')
+						.step-nav__item Для государственных заказчиков
+				.trade-company
+					.step
+						.step-icon-wrapper
+							+icon('monitor')
+						p
+							span Оставьте заявку
+							| на заказ дыхательных контуров
+						.step-number
+							span 1
+					.step
+						.step-icon-wrapper
+							+icon('discount')
+						p Мы составим коммерческое предложение с дилерской скидкой
+						.step-number
+							span 2
+					.step
+						.step-icon-wrapper
+							+icon('list')
+						p Предоставим техническое задание на выбранные дыхательные контуры
+						.step-number
+							span 3
+					.step
+						.step-icon-wrapper
+							+icon('license')
+						p Поможем подать аукционную заявку (предоставим регистрационное удостоверение)
+						.step-number
+							span 4
+					.step
+						.step-icon-wrapper
+							+icon('invoice')
+						p Подготовим счет на оплату
+						.step-number
+							span 5
+					.step.accent-step
+						.step-icon-wrapper
+							+icon('shipment')
+						p Доставим товар: транспортной компанией или экспресс-курьером, или Вы можете забрать товар самостоятельно с нашего склада.
+						.step-number
+							span 6
+				.government-company.hidden
+					.step
+						.step-icon-wrapper
+							+icon('monitor')
+						p
+							span Оставьте заявку
+							| на заказ дыхательных контуров
+						.step-number
+							span 1
+					.step
+						.step-icon-wrapper
+							+icon('offer')
+						p Подготовим коммерческое предложение
+						.step-number
+							span 2
+					.step
+						.step-icon-wrapper
+							+icon('list')
+						p Поможем подготовить техническое задание
+						.step-number
+							span 3
+					.step
+						.step-icon-wrapper
+							+icon('auction')
+						p Постараемся выиграть аукцион
+						.step-number
+							span 4
+					.step.accent-step
+						.step-icon-wrapper
+							+icon('courier')
+						p Доставим приобретенный товар лично в руки
+						.step-number
+							span 5
+					.step.dummy
+				a(href='mailto:info@med-kontur.ru').button Оставить заявку
+				p.steps-summary Мы гарантируем
+					|
+					|
+					span.steps-summary-span-accent качество и совметимость
+					|
+					|
+					span.steps-summary-span.trade-company с оборудованием заказчика!
+					span.steps-summary-span.government-company.hidden с Вашим оборудованием!
+		section.contacts
+			#contacts_map
+			.container
+				.contacts-box
+					h3 Наши контакты:
+					p ИНН: 7814667614
+					p 197371 гор.Санкт-Петербург, проспект Королева дом 48
+					p E-mail: 
+						a(href='mail-to:info@med-kontur.ru') info@med-kontur.ru
+					p Тел/факс:
+		footer
+			.container
+				+icon('logo_trade_med', 'footer-logo')
+				+icon('logo_harol', 'footer-logo')
+				.footer-flex
+					.copyright Официальный дилер дыхательных контуров
+						br
+						span "Trade Med" &copy; 2016 Все права защищены
+					.contacts-flex
+						.contact E-mail: 
+							a(href='mailto:info@med-kontur.ru') info@med-kontur.ru
+						.contact Тел/факс: 
+							a(href='mailto:info@med-kontur.ru') info@med-kontur.ru
+		script(type='text/javascript', src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+		script(type='text/javascript', src='./js/libs.min.js')
+		script(type='text/javascript', src='./js/script.js')

@@ -1,0 +1,116 @@
+@import "bourbon"
+
+@media screen and (max-width: 992px)
+	.container
+		max-width: 970px
+	.step
+		width: 25%
+		max-width: 25%
+
+@media screen and (max-width: 768px)
+	.container
+		max-width: auto
+	.header-benefit
+		flex-direction: column
+	.header-benefit__item
+		margin: 1rem 0
+		&:nth-child(2)
+			margin: 1rem 0
+	.product
+		width: 49%
+	.product-info
+		left: 50%
+		transform: translateX(-50%)
+	.advantage
+		width: 49%
+	.opinion
+		width: 49%
+	header h1:before
+		display: none
+	.header-line
+		width: auto
+		margin-left: 3em
+		margin-right: 3em
+	.icon-logo_trade_med,
+	.icon-logo_harol
+		display: none
+	.hero
+		position: relative
+		width: 100%
+		min-height: 20rem
+		clip-path: none
+		&:before
+			display: none
+		img
+			max-width: 14.142rem
+			max-height: 14.142rem
+	.hero-wrapper
+		&:before
+			width: 14.142rem
+			height: 14.142rem
+		&:after
+			width: 10.66rem
+			height: 10.66rem
+	.steps
+		padding-bottom: 3rem
+	.steps-summary
+		margin-top: 2rem
+	.steps-summary-span-accent,
+	.steps-summary-span
+		display: block
+		margin: 0 auto
+		width: fit-content
+	.contacts-box
+		padding-top: 2.5rem
+		left: 50%
+		transform: translateX(-50%)
+	.footer-flex,
+	.contacts-flex
+		flex-direction: column
+		align-items: center
+	.footer-flex
+		padding: 1rem 0rem
+		margin: 0 4rem
+	.footer-logo
+		display: block
+		max-width: 6rem
+
+@media screen and (max-width: 480px)
+	.product
+		width: 100%
+	.opinion
+		width: 100%
+	.button-box
+		padding: 1rem 0
+	.header-line
+		width: auto
+		margin: 0 auto
+		&:before,
+		&:after
+			display: none
+	.header_bar__item
+		flex-direction: column
+	.steps .button
+		display: block
+		margin-top: 0.5rem
+		margin-bottom: 2.5rem
+	.steps-nav
+		margin-bottom: 1.5rem
+	.step-nav__item
+		margin-bottom: 1rem
+	.step
+		width: 100%
+		max-width: 100%
+		min-height: 6rem
+		&:nth-last-child(1)
+			margin-bottom: 3rem
+	.dummy
+		display: none
+	.contacts-box
+		width: 15.25rem
+		padding: 2.5rem 0 0
+	.footer-flex,
+	.contacts-flex
+		margin: 0
+	.footer-logo
+		display: none
