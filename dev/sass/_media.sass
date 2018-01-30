@@ -7,15 +7,9 @@
 		width: 25%
 		max-width: 25%
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 1024px)
 	.container
-		max-width: auto
-	.header-benefit
-		flex-direction: column
-	.header-benefit__item
-		margin: 1rem 0
-		&:nth-child(2)
-			margin: 1rem 0
+		max-width: 100%
 	.product
 		width: 49%
 	.product-info
@@ -38,8 +32,7 @@
 		position: relative
 		width: 100%
 		min-height: 20rem
-		clip-path: none
-		&:before
+		svg
 			display: none
 		img
 			max-width: 14.142rem
@@ -48,9 +41,14 @@
 		&:before
 			width: 14.142rem
 			height: 14.142rem
-		&:after
-			width: 10.66rem
-			height: 10.66rem
+	.header-benefit
+		flex-direction: column
+		width: 80%
+	.header-benefit__item
+		flex-basis: auto
+		margin: 1rem auto
+		&:nth-child(2)
+			margin: 1rem auto
 	.steps
 		padding-bottom: 3rem
 	.steps-summary

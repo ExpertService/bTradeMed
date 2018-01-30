@@ -1,0 +1,12 @@
+<svg width="1920" height="950" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 970" preserveAspectRatio="none">
+	<defs>
+	<clipPath id="bg-hero_clip-path"  clipPathUnits="objectBoundingBox">
+		<polygon points="0,0 0.2,0 0.33,0.86 0,0.86"/>
+		<polygon points="0.215,0 0.785,0 0.655,0.86 0.5,1 0.345,0.86"/>
+		<polygon points="0.8,0 1,0 1,0.86 0.67,0.86"/>
+	</clipPath>
+	</defs>
+	<g id="bg-hero" clip-path="url(#bg-hero_clip-path)">
+		<image width="1920" height="970" preserveAspectRatio="xMidYMax slice" xlink:href="./img/bg_hero.jpg"/>
+	</g>
+</svg>
