@@ -22,7 +22,7 @@ var paths = {
 	},
 	pug: {
 		src: 'dev/pug/index.pug',
-		watch: ['dev/pug/**/*.*', 'dev/svg/mask/**/*.svg'],
+		watch: ['dev/pug/**/*.*'],
 		dest: './app_dev/'
 	},
 	sass: {
@@ -122,6 +122,7 @@ gulp.task('svg-watch', gulp.series('svg', function (callback) {
 
 gulp.task('img', function () {
 	return gulp.src(paths.img.src)
+//	.pipe(tinypng())
 	.pipe(gulp.dest(paths.img.dest));
 });
 
@@ -179,6 +180,7 @@ gulp.task('pug', function () {
 gulp.task('sass', function () {
 	return gulp.src(paths.sass.src)
 	.pipe(sass({
+			baseDir: './app_dev',
 			outputStyle: 'expanded',
 			includePaths: bourbon.includePaths
 	}))

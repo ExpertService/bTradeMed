@@ -3,6 +3,8 @@ include ./mixins
 doctype html
 html(lang="ru-Ru")
 	head
+		meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		title TradeMed - Официальный дилер дыхательных контуров Harol
 		meta(name="keywords", content="ключевые, слова документа")
 		meta(name="description", content="Краткое описание документа")
@@ -10,6 +12,16 @@ html(lang="ru-Ru")
 		link(rel="stylesheet", href="./css/fonts.css")
 		link(rel="stylesheet", href="./css/libs.min.css")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		script.
+			var uA = window.navigator.userAgent,
+				onlyIEorEdge = /msie\s|trident\/|edge\//i.test(uA) && !!( document.uniqueID || window.MSInputMethodContext);
+			if (onlyIEorEdge) {
+				var link = document.createElement("link");
+				link.setAttribute("rel", "stylesheet");
+				link.setAttribute("type", "text/css");
+				link.setAttribute("href", "./css/style.ie.only.css");
+				document.getElementsByTagName("head")[0].appendChild(link);
+			}
 	body
 		header
 			h1

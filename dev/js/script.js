@@ -1,21 +1,3 @@
-// Insert content sprite.svg before document body
-var ajax = new XMLHttpRequest();
-
-ajax.open("GET", "./img/svg/sprite.svg", true);
-ajax.send();
-ajax.onload = function(e) {
-	var div = document.createElement("div");
-	div.style.display = "none";
-	div.innerHTML = ajax.responseText;
-	document.body.insertBefore(div, document.body.childNodes[0]);
-}
-// jQuery version
-// $.get("svg/sprite.svg", function(data) {
-//   var div = document.createElement("div");
-//   div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
-//   document.body.insertBefore(div, document.body.childNodes[0]);
-// });
-
 // load magnific popup
 $('div.certificates-flex').magnificPopup({ 
   type: 'image',
